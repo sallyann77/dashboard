@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheyne Ranch — Tack Room Dashboard</title>
+<link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,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">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1214;
+    --panel: #171c1f;
+    --panel-border: #243035;
+    --teal: #77d7d5;
+    --teal-bright: #91f1ef;
+    --teal-dim: #5ab8b6;
+    --teal-glow: rgba(119, 215, 213, 0.12);
+    --teal-subtle: rgba(119, 215, 213, 0.06);
+    --text: #eef4f4;
+    --text-muted: #7a9a9a;
+    --green: #5ec47a;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ── */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+    background: var(--panel);
+    border-bottom: 2px solid var(--teal);
+    flex-shrink: 0;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .brand-text h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+  }
+
+  .brand-text h1 span {
+    color: var(--teal);
+  }
+
+  .brand-text .tagline {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 1px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .header-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--teal-dim);
+    background: var(--teal-glow);
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--panel-border);
+  }
+
+  .clock {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    font-variant-numeric: tabular-nums;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .clock-date {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 2px;
+  }
+
+  /* ── MAIN GRID ── */
+  .dashboard {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 50fr 20fr 30fr;
+    gap: 10px;
+    padding: 10px;
+    min-height: 0;
+  }
+
+  /* Left column: stacks both Airtable panels */
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+  }
+
+  .left-column .panel:first-child {
+    flex: 3;
+  }
+
+  .left-column .panel:last-child {
+    flex: 2;
+  }
+
+  .middle-column .panel:first-child {
+    flex: 1;
+  }
+
+  .middle-column .panel:last-child {
+    flex: 1;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--panel-border);
+    flex-shrink: 0;
+    background: var(--teal-subtle);
+  }
+
+  .panel-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .panel-badge {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--teal-glow);
+    color: var(--teal-dim);
+    font-weight: 600;
+    border: 1px solid var(--panel-border);
+  }
+
+  .panel-body {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+  }
+
+  .panel-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: var(--bg);
+  }
+
+  /* ── LESSON SCHEDULE ── */
+  .lessons .panel-header {
+    border-bottom: 2px solid var(--teal);
+    background: linear-gradient(135deg, var(--teal-subtle), transparent);
+  }
+
+  /* ── PLACEHOLDER STATE ── */
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    color: var(--text-muted);
+    padding: 24px;
+    text-align: center;
+  }
+
+  .placeholder-icon {
+    font-size: 32px;
+    opacity: 0.4;
+  }
+
+  .placeholder p {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+
+  .placeholder code {
+    background: var(--teal-glow);
+    color: var(--teal);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    word-break: break-all;
+  }
+
+  /* ── WEATHER PANEL ── */
+  .weather-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    gap: 14px;
+    min-height: 0;
+  }
+
+  .weather-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .weather-temp {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 0.85;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--white);
+    letter-spacing: -2px;
+  }
+
+  .weather-temp-unit {
+    font-size: 28px;
+    font-weight: 400;
+    vertical-align: super;
+    color: var(--text-muted);
+  }
+
+  .weather-icon-svg {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .weather-condition {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .weather-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .weather-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .weather-meta-icon {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  .weather-divider {
+    border: none;
+    border-top: 1px solid var(--panel-border);
+    margin: 2px 0;
+  }
+
+  /* ── HOURLY FORECAST ── */
+  .hourly-forecast {
+    display: flex;
+    gap: 3px;
+    overflow-x: auto;
+    align-items: stretch;
+    scrollbar-width: none;
+  }
+
+  .hourly-forecast::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hourly-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+    padding: 6px 2px;
+    border-radius: 8px;
+    background: var(--teal-subtle);
+    border: 1px solid var(--panel-border);
+  }
+
+  .hourly-item.now {
+    background: var(--teal-glow);
+    border-color: var(--teal-dim);
+  }
+
+  .hourly-time {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .hourly-item.now .hourly-time {
+    color: var(--teal);
+  }
+
+  .hourly-emoji {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .hourly-temp {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .hourly-precip {
+    font-size: 9px;
+    color: #6aabe8;
+    font-weight: 600;
+  }
+
+  /* ── DAILY FORECAST ── */
+  .daily-forecast {
+    display: flex;
+    gap: 4px;
+  }
+
+  .daily-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 4px;
+    border-radius: 8px;
+    background: var(--teal-subtle);
+    border: 1px solid var(--panel-border);
+  }
+
+  .daily-day {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .daily-emoji {
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .daily-precip {
+    font-size: 9px;
+    color: #6aabe8;
+    font-weight: 600;
+  }
+
+  .daily-temps {
+    display: flex;
+    gap: 6px;
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .daily-hi {
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .daily-lo {
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  /* ── SUN TIMES ── */
+  .sun-times {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 16px;
+    color: var(--text-muted);
+  }
+
+  .sun-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sun-label {
+    font-size: 22px;
+  }
+
+  .sun-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--teal);
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .weather-icon {
+    font-size: 42px;
+  }
+
+  /* ── TRELLO BUTTON ── */
+  .trello-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #0079BF, #0065a0);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-decoration: none;
+    padding: 16px;
+  }
+
+  .trello-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 121, 191, 0.3);
+  }
+
+  .trello-btn:active {
+    transform: scale(0.98);
+  }
+
+  .trello-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .trello-hint {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  /* ── BOTTOM BAR ── */
+  .status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 24px;
+    background: var(--panel);
+    border-top: 1px solid var(--panel-border);
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    display: inline-block;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .status-text {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .refresh-info {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* ── NWS ALERT BANNER ── */
+  .nws-alert-bar {
+    display: none;
+    flex-shrink: 0;
+    margin: 10px 10px 0 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    animation: alert-pulse 2s infinite;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .nws-alert-bar.active {
+    display: flex;
+  }
+
+  .nws-alert-bar.severity-extreme,
+  .nws-alert-bar.severity-severe {
+    background: rgba(220, 50, 50, 0.2);
+    border: 2px solid #dc3232;
+    color: #ff8a8a;
+  }
+
+  .nws-alert-bar.severity-moderate {
+    background: rgba(230, 160, 40, 0.2);
+    border: 2px solid #e6a028;
+    color: #f0c060;
+  }
+
+  .nws-alert-bar.severity-minor,
+  .nws-alert-bar.severity-unknown {
+    background: rgba(230, 200, 40, 0.15);
+    border: 2px solid #b8a830;
+    color: #e0d070;
+  }
+
+  @keyframes alert-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+
+  .nws-alert-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .nws-alert-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .nws-alert-title {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+
+  .nws-alert-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0.85;
+  }
+
+  .nws-alert-time {
+    font-size: 10px;
+    opacity: 0.6;
+    margin-top: 4px;
+  }
+
+  .nws-alert-dismiss {
+    background: none;
+    border: 1px solid currentColor;
+    color: inherit;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    opacity: 0.6;
+  }
+
+  .nws-alert-dismiss:hover {
+    opacity: 1;
+  }
+
+  /* ── SETUP BANNER ── */
+  .setup-banner {
+    background: var(--teal-glow);
+    border: 1px dashed var(--teal-dim);
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 10px 10px 0 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .setup-banner.hidden {
+    display: none;
+  }
+
+  .setup-banner-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .setup-banner-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .setup-banner-text strong {
+    color: var(--teal);
+  }
+
+  .setup-dismiss {
+    background: none;
+    border: 1px solid var(--panel-border);
+    color: var(--text-muted);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .setup-dismiss:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+
+  /* ── RIGHT COLUMN: WEATHER + LINKS ── */
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .right-column-weather {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--panel-border);
+    min-height: 0;
+  }
+
+  .right-column-buttons {
+    padding: 12px 16px;
+    flex-shrink: 0;
+  }
+  /* ── MOBILE RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body {
+      overflow-y: auto;
+      height: auto;
+      min-height: 100vh;
+    }
+
+    header {
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px 16px;
+      text-align: center;
+    }
+
+    .brand a {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .header-right {
+      justify-content: center;
+    }
+
+    .clock {
+      font-size: 22px;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      flex: none;
+      padding: 8px;
+      gap: 8px;
+    }
+
+    .left-column {
+      gap: 8px;
+    }
+
+    .left-column .panel:first-child,
+    .left-column .panel:last-child {
+      flex: none;
+      height: 400px;
+    }
+
+    .panel {
+      min-height: 300px;
+    }
+
+    .middle-column .panel {
+      min-height: 400px;
+      flex: none !important;
+      height: 400px;
+    }
+
+    .right-column {
+      min-height: auto;
+    }
+
+    .right-column-weather {
+      flex: none;
+    }
+
+    .weather-content {
+      padding: 14px;
+      gap: 10px;
+    }
+
+    .weather-temp {
+      font-size: 48px;
+    }
+
+    .weather-hero {
+      gap: 6px;
+    }
+
+    .weather-icon-svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    .weather-condition {
+      font-size: 14px;
+    }
+
+    .weather-meta {
+      font-size: 12px;
+      gap: 10px;
+    }
+
+    .hourly-forecast {
+      gap: 4px;
+    }
+
+    .hourly-item {
+      padding: 6px 4px;
+    }
+
+    .daily-forecast {
+      gap: 4px;
+    }
+
+    .trello-btn {
+      padding: 14px;
+      font-size: 15px;
+    }
+
+    .status-bar {
+      flex-direction: column;
+      gap: 4px;
+      text-align: center;
+      padding: 8px 16px;
+    }
+
+    .nws-alert-bar {
+      margin: 8px 8px 0 8px;
+    }
+
+    .setup-banner {
+      margin: 8px 8px 0 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .left-column .panel:first-child,
+    .left-column .panel:last-child {
+      height: 350px;
+    }
+
+    .panel {
+      min-height: 250px;
+    }
+
+    .weather-temp {
+      font-size: 40px;
+    }
+
+    .daily-item {
+      padding: 6px 2px;
+    }
+
+    .daily-day {
+      font-size: 10px;
+    }
+
+    .daily-emoji {
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="brand">
+    <!--
+      LOGO: This references logo.jpg in the same folder as this HTML file.
+      Save your logo file next to this HTML file on the tack room computer.
+      Or change the src to a full URL if hosted online.
+    -->
+    <a href="https://cheyneranch.com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;text-decoration:none;">
+      <img src="data:image/jpeg;base64,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" alt="Cheyne Ranch" class="brand-logo">
+      <div class="brand-text">
+        <h1><span>Cheyne</span> Ranch</h1>
+        <div class="tagline">Teaching Animal Care & Connection</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <div>
+      <div class="clock" id="clock">--:--</div>
+      <div class="clock-date" id="clock-date">Loading...</div>
+    </div>
+  </div>
+</header>
+
+<!-- ── SETUP BANNER ── -->
+<div class="setup-banner hidden" id="setupBanner">
+  <span class="setup-banner-icon">⚙️</span>
+  <div class="setup-banner-text">
+    <strong>Setup mode:</strong> Replace the placeholder URLs in this file with your real Airtable shared view links and Trello board URL.
+    Open this file in a text editor, search for <strong>REPLACE_WITH_</strong>, and swap in your links.
+  </div>
+  <button class="setup-dismiss" onclick="document.getElementById('setupBanner').classList.add('hidden')">Dismiss</button>
+</div>
+
+<!-- ── DASHBOARD GRID ── -->
+<div class="dashboard">
+
+  <!-- LEFT COLUMN: Both Airtable schedules stacked -->
+  <div class="left-column">
+
+    <!-- LESSON SCHEDULE (top, larger) -->
+    <div class="panel lessons">
+      <div class="panel-header">
+        <span class="panel-title">📋 Today's Lesson Schedule</span>
+        <span class="panel-badge">Airtable</span>
+      </div>
+      <div class="panel-body">
+        <iframe
+          id="lessonsFrame"
+          src="about:blank"
+          data-src="https://airtable.com/embed/appL683xNYrZXN5Fu/shr6u5YtEbAec1ESY?viewControls=off"
+          loading="lazy"
+        ></iframe>
+        <div class="placeholder" id="lessonsPlaceholder">
+          <div class="placeholder-icon">📋</div>
+          <p>Lesson schedule will appear here.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOLUNTEER SCHEDULE (bottom, smaller) -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">🤝 Volunteer Schedule</span>
+        <span class="panel-badge">Airtable</span>
+      </div>
+      <div class="panel-body">
+        <iframe
+          id="volunteersFrame"
+          src="about:blank"
+          data-src="https://airtable.com/embed/appJls0pvcsNQZocj/shrB7XaqyhWKz6K0s?viewControls=off"
+          loading="lazy"
+        ></iframe>
+        <div class="placeholder" id="volunteersPlaceholder">
+          <div class="placeholder-icon">🤝</div>
+          <p>Volunteer schedule will appear here.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MIDDLE COLUMN: Upcoming Events + Google Calendar stacked -->
+  <div class="left-column middle-column">
+
+    <!-- Upcoming Events (top) -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">📅 Upcoming Events</span>
+        <span class="panel-badge">Airtable</span>
+      </div>
+      <div class="panel-body">
+        <iframe
+          id="eventsFrame"
+          src="about:blank"
+          data-src="https://airtable.com/embed/appL683xNYrZXN5Fu/shrYcSDk3w8L6131p?viewControls=off"
+          loading="lazy"
+          style="width:100%;height:100%;border:none;background:var(--bg);"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Google Calendar (bottom) -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">🗓️ Calendar</span>
+        <span class="panel-badge">Google</span>
+      </div>
+      <div class="panel-body">
+        <iframe
+          id="calendarFrame"
+          src="about:blank"
+          data-src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&src=Y19jMmFiZWIyNzlmNzVhNzMxYmQ0YmJiYjMxMmY2NjE0Njg1OGU4OWM2Y2U3MmZlZWRiOGRmMDUwZTFkNzE4ZDM5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=aHQzamxmYWFjNWxmZDYyNjN1bGZoNHRxbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%2377d7d5&color=%230b8043&color=%23c6c8b7"
+          loading="lazy"
+          style="width:100%;height:100%;border:none;background:var(--bg);"
+        ></iframe>
+        <div class="placeholder" id="calendarPlaceholder">
+          <div class="placeholder-icon">🗓️</div>
+          <p>Google Calendar will appear here.<br>Send me the public embed link.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT COLUMN: Weather + Links -->
+  <div class="panel right-column">
+
+    <!-- Weather -->
+    <div class="right-column-weather">
+      <div class="panel-header">
+        <span class="panel-title">🌤️ Oviedo Weather</span>
+        <span class="panel-badge" id="weatherTime">--</span>
+      </div>
+      <div class="weather-content" id="weatherContent">
+        <!-- Hero: big temp + icon -->
+        <div class="weather-hero">
+          <div>
+            <div class="weather-temp" id="weatherTemp">--<span class="weather-temp-unit">°</span></div>
+          </div>
+          <span class="weather-icon-svg" id="weatherIcon">⏳</span>
+        </div>
+
+        <!-- Condition text -->
+        <div class="weather-condition" id="weatherDesc">Loading...</div>
+
+        <!-- Meta line: feels like, wind, humidity -->
+        <div class="weather-meta">
+          <span class="weather-meta-item"><span class="weather-meta-icon">🌡️</span> Feels <span id="weatherFeels">--</span></span>
+          <span class="weather-meta-item"><span class="weather-meta-icon">💨</span> <span id="weatherWind">--</span></span>
+          <span class="weather-meta-item"><span class="weather-meta-icon">💧</span> <span id="weatherHumidity">--</span></span>
+          <span class="weather-meta-item"><span class="weather-meta-icon">☀️</span> UV <span id="weatherUV">--</span></span>
+        </div>
+
+        <hr class="weather-divider">
+
+        <!-- Hourly forecast -->
+        <div class="hourly-forecast" id="hourlyForecast"></div>
+
+        <hr class="weather-divider">
+
+        <!-- Sunrise / Sunset -->
+        <div class="sun-times">
+          <span class="sun-item"><span class="sun-label">🌅</span> <span class="sun-value" id="weatherSunrise">--</span></span>
+          <span class="sun-item"><span class="sun-label">🌇</span> <span class="sun-value" id="weatherSunset">--</span></span>
+        </div>
+
+        <!-- Weather Alerts link -->
+        <a
+          href="https://www.weatherbug.com/alerts/geneva-fl-32732?center=28.734263118060312,-81.14872522062004,9"
+          target="_blank"
+          rel="noopener"
+          style="display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;border-radius:6px;background:rgba(196,92,92,0.15);border:1px solid rgba(196,92,92,0.3);color:#e87c7c;font-size:13px;font-weight:600;text-decoration:none;transition:background 0.15s;"
+          onmouseover="this.style.background='rgba(196,92,92,0.25)'"
+          onmouseout="this.style.background='rgba(196,92,92,0.15)'"
+        >⚠️ Weather Alerts</a>
+
+        <!-- 4-day daily forecast -->
+        <div class="daily-forecast" id="dailyForecast"></div>
+      </div>
+    </div>
+
+    <!-- Trello + Staff Hub Buttons -->
+    <div class="right-column-buttons">
+      <div style="display:flex;gap:8px;">
+        <a
+          class="trello-btn"
+          id="trelloBtn"
+          href="https://trello.com/b/zuHszZoS"
+          target="_blank"
+          rel="noopener"
+          style="flex:1;"
+        >
+          <svg viewBox="0 0 24 24" fill="white" style="width:22px;height:22px;"><path d="M19.5 2h-15A2.5 2.5 0 002 4.5v15A2.5 2.5 0 004.5 22h15a2.5 2.5 0 002.5-2.5v-15A2.5 2.5 0 0019.5 2zm-8.75 15.25a1.25 1.25 0 01-1.25 1.25H6.25A1.25 1.25 0 015 17.25V6.25A1.25 1.25 0 016.25 5H9.5a1.25 1.25 0 011.25 1.25v11zm8.25-4a1.25 1.25 0 01-1.25 1.25h-3.25A1.25 1.25 0 0113.25 13.25V6.25A1.25 1.25 0 0114.5 5h3.25A1.25 1.25 0 0119 6.25v7z"/></svg>
+          Trello
+        </a>
+        <a
+          class="trello-btn"
+          href="https://cheyneranch.com/staff"
+          target="_blank"
+          rel="noopener"
+          style="flex:1;background:linear-gradient(135deg, var(--teal-dim), #3a8a88);"
+        >
+          🤝 Staff Hub
+        </a>
+      </div>
+      <div class="trello-hint">Open in new tabs · barn@cheyneranch.com</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── STATUS BAR ── -->
+<div class="status-bar">
+  <div>
+    <span class="status-dot"></span>
+    <span class="status-text">Dashboard live · Oviedo, FL</span>
+  </div>
+  <span class="refresh-info">Auto-refresh every 5 min · Press F11 for fullscreen</span>
+</div>
+
+<script>
+  // ── CLOCK ──
+  function updateClock() {
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+    const dateStr = now.toLocaleDateString('en-US', {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+    document.getElementById('clock').textContent = timeStr;
+    document.getElementById('clock-date').textContent = dateStr;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // ── AIRTABLE EMBED LOADER ──
+  function loadFrames() {
+    const frames = document.querySelectorAll('iframe[data-src]');
+    frames.forEach(frame => {
+      const src = frame.getAttribute('data-src');
+      if (src && !src.startsWith('REPLACE_WITH_')) {
+        frame.src = src;
+        const placeholder = frame.nextElementSibling;
+        if (placeholder && placeholder.classList.contains('placeholder')) {
+          placeholder.style.display = 'none';
+        }
+      } else {
+        frame.style.display = 'none';
+      }
+    });
+
+    const trelloBtn = document.getElementById('trelloBtn');
+    if (trelloBtn.href.includes('REPLACE_WITH_')) {
+      trelloBtn.style.opacity = '0.5';
+      trelloBtn.style.pointerEvents = 'none';
+    }
+
+    const allConfigured = [...frames].every(f => {
+      const s = f.getAttribute('data-src');
+      return s && !s.startsWith('REPLACE_WITH_');
+    }) && !trelloBtn.href.includes('REPLACE_WITH_');
+
+    if (allConfigured) {
+      document.getElementById('setupBanner').classList.add('hidden');
+    }
+  }
+  loadFrames();
+
+  // ── AUTO-REFRESH AIRTABLE EVERY 5 MINUTES ──
+  setInterval(() => {
+    const frames = document.querySelectorAll('iframe[data-src]');
+    frames.forEach(frame => {
+      const src = frame.getAttribute('data-src');
+      if (src && !src.startsWith('REPLACE_WITH_')) {
+        frame.src = src;
+      }
+    });
+  }, 5 * 60 * 1000);
+
+  // ── WEATHER (Open-Meteo, free, no API key needed) ──
+  async function fetchWeather() {
+    try {
+      const lat = 28.6700;
+      const lon = -81.2081;
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,uv_index&hourly=temperature_2m,weather_code,precipitation_probability&daily=sunrise,sunset,temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FNew_York&forecast_days=5`;
+
+      const resp = await fetch(url);
+      const data = await resp.json();
+      const c = data.current;
+
+      document.getElementById('weatherTemp').innerHTML = Math.round(c.temperature_2m) + '<span class="weather-temp-unit">°</span>';
+      document.getElementById('weatherFeels').textContent = Math.round(c.apparent_temperature) + '°';
+      document.getElementById('weatherHumidity').textContent = c.relative_humidity_2m + '%';
+      document.getElementById('weatherWind').textContent = Math.round(c.wind_speed_10m) + ' mph';
+      document.getElementById('weatherUV').textContent = c.uv_index;
+      document.getElementById('weatherDesc').textContent = weatherCodeToText(c.weather_code);
+      document.getElementById('weatherIcon').textContent = weatherCodeToEmoji(c.weather_code);
+      document.getElementById('weatherIcon').style.fontSize = '48px';
+
+      // Sunrise / Sunset
+      if (data.daily) {
+        const fmtTime = (iso) => {
+          const d = new Date(iso);
+          return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+        };
+        document.getElementById('weatherSunrise').textContent = fmtTime(data.daily.sunrise[0]);
+        document.getElementById('weatherSunset').textContent = fmtTime(data.daily.sunset[0]);
+
+        // Daily 4-day forecast (skip today = index 0)
+        const dailyContainer = document.getElementById('dailyForecast');
+        if (dailyContainer) {
+          dailyContainer.innerHTML = '';
+          const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+          for (let i = 1; i <= 4 && i < data.daily.time.length; i++) {
+            const d = new Date(data.daily.time[i] + 'T12:00:00');
+            const dayName = dayNames[d.getDay()];
+            const hi = Math.round(data.daily.temperature_2m_max[i]);
+            const lo = Math.round(data.daily.temperature_2m_min[i]);
+            const code = data.daily.weather_code[i];
+            const precip = data.daily.precipitation_probability_max[i];
+
+            const item = document.createElement('div');
+            item.className = 'daily-item';
+            let html = `
+              <span class="daily-day">${dayName}</span>
+              <span class="daily-emoji">${weatherCodeToEmoji(code)}</span>
+            `;
+            if (precip > 0) {
+              html += `<span class="daily-precip">💧${precip}%</span>`;
+            }
+            html += `
+              <div class="daily-temps">
+                <span class="daily-hi">${hi}</span>
+                <span class="daily-lo">${lo}</span>
+              </div>
+            `;
+            item.innerHTML = html;
+            dailyContainer.appendChild(item);
+          }
+        }
+      }
+
+      // Hourly forecast - next 6 hours
+      if (data.hourly) {
+        const now = new Date();
+        let startIdx = data.hourly.time.findIndex(t => new Date(t) >= now);
+        if (startIdx < 0) startIdx = 0;
+
+        const container = document.getElementById('hourlyForecast');
+        container.innerHTML = '';
+
+        const hoursToShow = 6;
+        for (let i = 0; i < hoursToShow; i++) {
+          const idx = startIdx + i;
+          if (idx >= data.hourly.time.length) break;
+
+          const hourDate = new Date(data.hourly.time[idx]);
+          const temp = Math.round(data.hourly.temperature_2m[idx]);
+          const code = data.hourly.weather_code[idx];
+          const precip = data.hourly.precipitation_probability[idx];
+          const timeLabel = i === 0 ? 'Now' : hourDate.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true });
+
+          const item = document.createElement('div');
+          item.className = 'hourly-item' + (i === 0 ? ' now' : '');
+          let html = `
+            <span class="hourly-time">${timeLabel}</span>
+            <span class="hourly-emoji">${weatherCodeToEmoji(code)}</span>
+            <span class="hourly-temp">${temp}°</span>
+          `;
+          if (precip > 0) {
+            html += `<span class="hourly-precip">💧${precip}%</span>`;
+          }
+          item.innerHTML = html;
+          container.appendChild(item);
+        }
+      }
+
+      const updateTime = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+      document.getElementById('weatherTime').textContent = 'Updated ' + updateTime;
+    } catch (e) {
+      document.getElementById('weatherDesc').textContent = 'Weather unavailable';
+      console.error('Weather fetch failed:', e);
+    }
+  }
+
+  function weatherCodeToText(code) {
+    const codes = {
+      0: 'Clear sky', 1: 'Mainly clear', 2: 'Partly cloudy', 3: 'Overcast',
+      45: 'Foggy', 48: 'Rime fog', 51: 'Light drizzle', 53: 'Drizzle',
+      55: 'Heavy drizzle', 61: 'Light rain', 63: 'Moderate rain', 65: 'Heavy rain',
+      71: 'Light snow', 73: 'Snow', 75: 'Heavy snow', 80: 'Light showers',
+      81: 'Showers', 82: 'Heavy showers', 95: 'Thunderstorm',
+      96: 'Thunderstorm + hail', 99: 'Thunderstorm + heavy hail'
+    };
+    return codes[code] || 'Unknown';
+  }
+
+  function weatherCodeToEmoji(code) {
+    if (code === 0) return '☀️';
+    if (code <= 2) return '⛅';
+    if (code === 3) return '☁️';
+    if (code <= 48) return '🌫️';
+    if (code <= 55) return '🌦️';
+    if (code <= 65) return '🌧️';
+    if (code <= 75) return '❄️';
+    if (code <= 82) return '🌧️';
+    if (code >= 95) return '⛈️';
+    return '🌤️';
+  }
+
+  fetchWeather();
+  setInterval(fetchWeather, 30 * 60 * 1000);
+
+  // ── NWS ALERTS (free, no API key, checks every 5 min) ──
+  async function fetchNWSAlerts() {
+    try {
+      const url = 'https://api.weather.gov/alerts/active?point=28.67,-81.2081';
+      const resp = await fetch(url, {
+        headers: { 'User-Agent': 'CheyneRanchDashboard (info@cheyneranch.com)' }
+      });
+      const data = await resp.json();
+      const bar = document.getElementById('nwsAlertBar');
+      const alerts = data.features || [];
+
+      if (alerts.length === 0) {
+        bar.classList.remove('active');
+        return;
+      }
+
+      // Sort by severity: extreme > severe > moderate > minor
+      const severityOrder = { Extreme: 0, Severe: 1, Moderate: 2, Minor: 3, Unknown: 4 };
+      alerts.sort((a, b) => {
+        const sa = severityOrder[a.properties.severity] ?? 4;
+        const sb = severityOrder[b.properties.severity] ?? 4;
+        return sa - sb;
+      });
+
+      // Show the most severe alert
+      const top = alerts[0].properties;
+      const severity = (top.severity || 'unknown').toLowerCase();
+
+      // Remove old severity classes, add current
+      bar.className = 'nws-alert-bar active severity-' + severity;
+
+      // Pick icon based on event type
+      let icon = '⚠️';
+      const event = (top.event || '').toLowerCase();
+      if (event.includes('tornado')) icon = '🌪️';
+      else if (event.includes('thunder') || event.includes('lightning')) icon = '⚡';
+      else if (event.includes('flood')) icon = '🌊';
+      else if (event.includes('hurricane') || event.includes('tropical')) icon = '🌀';
+      else if (event.includes('heat')) icon = '🔥';
+      else if (event.includes('wind')) icon = '💨';
+      else if (event.includes('fire')) icon = '🔥';
+      bar.querySelector('.nws-alert-icon').textContent = icon;
+
+      document.getElementById('nwsAlertTitle').textContent =
+        top.event + (alerts.length > 1 ? ` (+${alerts.length - 1} more)` : '');
+
+      // Truncate description
+      const desc = top.headline || top.description || '';
+      document.getElementById('nwsAlertDesc').textContent =
+        desc.length > 200 ? desc.slice(0, 200) + '...' : desc;
+
+      // Format time
+      const expires = top.expires ? new Date(top.expires) : null;
+      if (expires) {
+        document.getElementById('nwsAlertTime').textContent =
+          'Until ' + expires.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }) +
+          ' · ' + expires.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+      }
+
+    } catch (e) {
+      console.error('NWS alert fetch failed:', e);
+    }
+  }
+
+  fetchNWSAlerts();
+  setInterval(fetchNWSAlerts, 5 * 60 * 1000); // check every 5 minutes
+</script>
+
+</body>
+</html>
