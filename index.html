@@ -122,7 +122,7 @@
     min-height: 0;
   }
 
-  /* Left column: stacks both Airtable panels */
+  /* Column wrapper: stacks panels vertically */
   .left-column {
     display: flex;
     flex-direction: column;
@@ -130,12 +130,9 @@
     min-height: 0;
   }
 
-  .left-column .panel:first-child {
-    flex: 3;
-  }
-
-  .left-column .panel:last-child {
-    flex: 2;
+  /* Left column now holds a single panel — let it fill the column */
+  .schedule-column .panel {
+    flex: 1;
   }
 
   .middle-column .panel:first-child {
@@ -731,10 +728,9 @@
       gap: 8px;
     }
 
-    .left-column .panel:first-child,
-    .left-column .panel:last-child {
+    .schedule-column .panel {
       flex: none;
-      height: 400px;
+      height: 600px;
     }
 
     .panel {
@@ -816,9 +812,8 @@
   }
 
   @media (max-width: 480px) {
-    .left-column .panel:first-child,
-    .left-column .panel:last-child {
-      height: 350px;
+    .schedule-column .panel {
+      height: 500px;
     }
 
     .panel {
@@ -857,7 +852,7 @@
       <img src="data:image/jpeg;base64,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" alt="Cheyne Ranch" class="brand-logo">
       <div class="brand-text">
         <h1><span>Cheyne</span> Ranch</h1>
-        <div class="tagline">Teaching Animal Care & Connection</div>
+        <div class="tagline">Teaching Animal Care &amp; Connection</div>
       </div>
     </a>
   </div>
@@ -868,6 +863,17 @@
     </div>
   </div>
 </header>
+
+<!-- ── NWS ALERT BANNER (hidden until an active alert is found) ── -->
+<div class="nws-alert-bar" id="nwsAlertBar">
+  <span class="nws-alert-icon">⚠️</span>
+  <div class="nws-alert-content">
+    <div class="nws-alert-title" id="nwsAlertTitle"></div>
+    <div class="nws-alert-desc" id="nwsAlertDesc"></div>
+    <div class="nws-alert-time" id="nwsAlertTime"></div>
+  </div>
+  <button class="nws-alert-dismiss" onclick="document.getElementById('nwsAlertBar').classList.remove('active')">Dismiss</button>
+</div>
 
 <!-- ── SETUP BANNER ── -->
 <div class="setup-banner hidden" id="setupBanner">
@@ -882,10 +888,10 @@
 <!-- ── DASHBOARD GRID ── -->
 <div class="dashboard">
 
-  <!-- LEFT COLUMN: Both Airtable schedules stacked -->
-  <div class="left-column">
+  <!-- LEFT COLUMN: Lesson schedule, full height -->
+  <div class="left-column schedule-column">
 
-    <!-- LESSON SCHEDULE (top, larger) -->
+    <!-- LESSON SCHEDULE -->
     <div class="panel lessons">
       <div class="panel-header">
         <span class="panel-title">📋 Today's Lesson Schedule</span>
@@ -901,26 +907,6 @@
         <div class="placeholder" id="lessonsPlaceholder">
           <div class="placeholder-icon">📋</div>
           <p>Lesson schedule will appear here.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- VOLUNTEER SCHEDULE (bottom, smaller) -->
-    <div class="panel">
-      <div class="panel-header">
-        <span class="panel-title">🤝 Volunteer Schedule</span>
-        <span class="panel-badge">Airtable</span>
-      </div>
-      <div class="panel-body">
-        <iframe
-          id="volunteersFrame"
-          src="about:blank"
-          data-src="https://airtable.com/embed/appJls0pvcsNQZocj/shrB7XaqyhWKz6K0s?viewControls=off"
-          loading="lazy"
-        ></iframe>
-        <div class="placeholder" id="volunteersPlaceholder">
-          <div class="placeholder-icon">🤝</div>
-          <p>Volunteer schedule will appear here.</p>
         </div>
       </div>
     </div>
@@ -948,6 +934,11 @@
     </div>
 
     <!-- Google Calendar (bottom) -->
+    <!--
+      TO ADD ANOTHER GOOGLE CALENDAR:
+      Add one more &src=CALENDAR_ID to the data-src URL below, with @ written as %40.
+      Then add one more &color=%23xxxxxx at the end. Colors apply to the src's in order.
+    -->
     <div class="panel">
       <div class="panel-header">
         <span class="panel-title">🗓️ Calendar</span>
@@ -957,7 +948,7 @@
         <iframe
           id="calendarFrame"
           src="about:blank"
-          data-src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&src=Y19jMmFiZWIyNzlmNzVhNzMxYmQ0YmJiYjMxMmY2NjE0Njg1OGU4OWM2Y2U3MmZlZWRiOGRmMDUwZTFkNzE4ZDM5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=aHQzamxmYWFjNWxmZDYyNjN1bGZoNHRxbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%2377d7d5&color=%230b8043&color=%23c6c8b7"
+          data-src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&src=Y19jMmFiZWIyNzlmNzVhNzMxYmQ0YmJiYjMxMmY2NjE0Njg1OGU4OWM2Y2U3MmZlZWRiOGRmMDUwZTFkNzE4ZDM5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=aHQzamxmYWFjNWxmZDYyNjN1bGZoNHRxbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=6t5jrvjq4csfggf3ao7hovq8nhod5uju%40import.calendar.google.com&color=%2377d7d5&color=%230b8043&color=%23c6c8b7&color=%23e6a028"
           loading="lazy"
           style="width:100%;height:100%;border:none;background:var(--bg);"
         ></iframe>
