@@ -869,6 +869,17 @@
   </div>
 </header>
 
+<!-- ── NWS ALERT BANNER (hidden until an active alert is found) ── -->
+<div class="nws-alert-bar" id="nwsAlertBar">
+  <span class="nws-alert-icon">⚠️</span>
+  <div class="nws-alert-content">
+    <div class="nws-alert-title" id="nwsAlertTitle"></div>
+    <div class="nws-alert-desc" id="nwsAlertDesc"></div>
+    <div class="nws-alert-time" id="nwsAlertTime"></div>
+  </div>
+  <button class="nws-alert-dismiss" onclick="document.getElementById('nwsAlertBar').classList.remove('active')">Dismiss</button>
+</div>
+
 <!-- ── SETUP BANNER ── -->
 <div class="setup-banner hidden" id="setupBanner">
   <span class="setup-banner-icon">⚙️</span>
